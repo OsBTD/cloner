@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker News Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-newspaper"></i> Hacker News Explorer</h1>
+            <div class="header-content">
+                <div class="filter-section">
+                    <select id="post-type">
+                        <option value="newstories">New Stories</option>
+                        <option value="jobstories">Jobs</option>
+                        <option value="polls">Polls</option>
+                        <option value="beststories">Best Stories</option>
+                        <option value="askstories">Ask HN</option>
+                        <option value="showstories">Show HN</option>
+                    </select>
+                </div>
+                <div id="notifications" class="notification-panel">
+                    <span id="new-posts-count">0</span> new posts available
+                    <button id="refresh-button"><i class="fas fa-sync-alt"></i> Refresh</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="posts-section">
+                <h2>Posts</h2>
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading posts...</p>
+                </div>
+                <div id="feed"></div>
+                <button id="load-more" class="load-more-btn">Load More</button>
+            </section>
+
+            <section class="live-update-section">
+                <h2>Live Updates</h2>
+                <div id="live-data" class="live-data-container">
+                    <div class="live-data-header">
+                        <h3>Latest Item</h3>
+                        <span id="update-time"></span>
+                    </div>
+                    <div id="latest-item" class="latest-item">
+                        <p>Waiting for updates...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="post-details-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="post-detail-header">
+                    <h2 id="post-title"></h2>
+                    <div class="post-meta">
+                        <span>By: <span id="post-author"></span></span>
+                        <span>Score: <span id="post-score"></span></span>
+                        <a id="post-link" href="#" target="_blank">Open Original</a>
+                    </div>
+                </div>
+                <div class="comments-section">
+                    <h3>Comments</h3>
+                    <div id="comments-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
