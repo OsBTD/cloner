@@ -33,7 +33,7 @@ body {
 /* Header Styles */
 header {
     background-color: var(--primary-color);
-    color: rgba(11, 47, 77, 0.658);
+    color: var(--secondary-color);
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -122,7 +122,7 @@ section {
 
 section h2 {
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     padding-bottom: 10px;
     border-bottom: 1px solid var(--border-color);
 }
